@@ -1,0 +1,45 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+#container {
+	width: 970px;
+	min-height: 200px;
+	margin: 0 auto;
+	background-color: lightgray;
+	padding-top: 30px;
+	font-family: Tahoma;
+}
+h1 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+#form, #cards {
+	display: inline-block;
+	vertical-align: top;
+}
+#form {
+	width: 300px;
+	height:150px;
+	padding-left: 50px;
+}
+	#description {
+		width: 200px;
+		min-height: 100px;
+	}
+#cards {
+	width: 500px;
+	min-height: 200px;
+}
+	.contact_box {
+		width: 400px;
+		min-height: 150px;
+		border: 2px solid black;
+		margin-bottom: 10px;
+		text-align: center;
+		padding-top: 20px;
+	}
+		.contact_box h2 {
+			margin-top: 50px;
+			margin-bottom: 20px;
+		}

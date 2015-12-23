@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Contact Card</title>
+	<meta name="description" content="Practice page making contact cards using jquery"/>
+	<link rel="stylesheet" type="text/css" href="style_contact_card.css"/>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("form").submit(function(){
+				$("#cards").append("<h2>" + $("#first").val() + " " + $("#last").val() + "</h2>" + "<h4>Click for description</h4>" + "<h5 style = display:none>" + $("#description").val() + "</h5>").addClass("contact_box");
+				$("#desciption").addClass("contact_box");
+				$(".reset").val("");
+				return false;
+			})
+			$("#cards").on("click", "h2, h4", function(){
+				$(this).siblings().hide();
+				$(this).hide();
+				$("h5").show();
+				
+			})
+		})
+
+	</script>
+</head>
+<body>
+	<div id="container">
+		<h1>Contact Cards</h1>
+		<form id="form">
+			<p>First Name: <input id="first" class="reset" type="text" name="first_name"></p>
+			<p>Last Name: <input id="last" class="reset" type="text" name="last_name"></p>
+			<p>Description:</p>
+			<textarea id="description" class="reset" name="description"></textarea>
+			<input type="submit" value="Submit">
+		</form><!-- end of form -->
+		<div id="cards">
+			
+
+		</div><!-- end of cards -->
+	</div><!-- end of container -->
+
+</body>
+</html>
